@@ -13,7 +13,7 @@
 #' get_root()
 . <- function(n = NULL, root = teach::get_root(), script = sprintf('%s.R', sprintf("%02d", n))) {
     path <- file.path(root, script)
-    x <- readLines(path)
+    x <- readLines(path, warn = FALSE)
     xfun::rstudio_type(x, pause = function() runif(1, 0, 0.25), mistake = 0.005)
 }
 
