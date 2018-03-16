@@ -1,0 +1,15 @@
+citHeader("To cite teach in publications, please use:")
+
+
+citEntry(entry = "manual",
+    title = "{teach}: A ...",
+    author = "Tyler W. Rinker",
+    address = "Buffalo, New York",
+    note = "version 0.0.1",
+    year = "2018",
+    url = "http://github.com/trinker/teach", 
+    textVersion  = paste("Rinker, T. W. (2018).",
+        "teach: ...",
+        "version 0.0.1. Buffalo, New York.",
+        "http://github.com/trinker/teach")
+)

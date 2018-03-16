@@ -1,0 +1,53 @@
+---
+title: "teach"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  md_document:
+    toc: true      
+---
+
+```{r, echo=FALSE}
+desc <- suppressWarnings(readLines("DESCRIPTION"))
+regex <- "(^Version:\\s+)(\\d+\\.\\d+\\.\\d+)"
+loc <- grep(regex, desc)
+ver <- gsub(regex, "\\2", desc[loc])
+#verbadge <- sprintf('<a href="https://img.shields.io/badge/Version-%s-orange.svg"><img src="https://img.shields.io/badge/Version-%s-orange.svg" alt="Version"/></a></p>', ver, ver)
+verbadge <- ''
+````
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+knit_hooks$set(htmlcap = function(before, options, envir) {
+  if(!before) {
+    paste('<p class="caption"><b><em>',options$htmlcap,"</em></b></p>",sep="")
+    }
+    })
+knitr::opts_knit$set(self.contained = TRUE, cache = FALSE, fig.align = 'center')
+knitr::opts_chunk$set(fig.path = "tools/figure/")
+options(scipen=999)
+```
+
+
+[![Build Status](https://travis-ci.org/trinker/teach.svg?branch=master)](https://travis-ci.org/trinker/teach)
+[![Coverage Status](https://coveralls.io/repos/trinker/teach/badge.svg?branch=master)](https://coveralls.io/r/trinker/teach?branch=master)
+`r verbadge`
+
+**teach** is a package to assist in teaching.  A personal package.
+
+# Installation
+
+To download the development version of **teach**:
+
+Download the [zip ball](https://github.com/trinker/teach/zipball/master) or [tar ball](https://github.com/trinker/teach/tarball/master), decompress and run `R CMD INSTALL` on it, or use the **pacman** package to install the development version:
+
+```r
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load_current_gh("trinker/teach")
+```
+
+# Contact
+
+You are welcome to:    
+- submit suggestions and bug-reports at: <https://github.com/trinker/teach/issues>    
+- send a pull request on: <https://github.com/trinker/teach>    
+- compose a friendly e-mail to: <tyler.rinker@gmail.com>    
