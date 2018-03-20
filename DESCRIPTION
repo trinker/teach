@@ -5,7 +5,8 @@ Authors@R: c(person("Tyler", "Rinker", email = "tyler.rinker@gmail.com", role = 
 Maintainer: Tyler Rinker <tyler.rinker@gmail.com>
 Description: Tools for teaching.
 Depends: R (>= 3.4.3)
-Date: 2018-03-16
+Imports: stringi
+Date: 2018-03-20
 License: GPL-2
 LazyData: TRUE
 Roxygen: list(wrap = FALSE)

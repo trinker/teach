@@ -28,3 +28,8 @@ get_root <- function(path = getOption('teach_path')){
     if (is.null(path)) path <- 'scripts'
     path
 }
+
+
+
+
+

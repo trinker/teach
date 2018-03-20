@@ -2,3 +2,6 @@
 
 export(.)
 export(get_root)
+export(make_instructor_scripts_dir)
+export(make_lectures)
+export(make_lesson)
